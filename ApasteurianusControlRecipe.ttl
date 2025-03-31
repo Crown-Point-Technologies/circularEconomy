@@ -1,0 +1,617 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix recipe: <https://spec.industrialontologies.org/ontology/recipe/> .
+@prefix execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> .
+@prefix lca: <https://spec.industrialontologies.org/ontology/lca/core/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+
+lca:AcetobacterAceticAcidGeneralRecipe1 a recipe:GeneralRecipe ;
+	rdfs:label "Acetobacter Acetic Acid General Recipe 1" .
+
+lca:AcetobacterAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter Start Up Process Stage 1" .
+
+lca:AcetobacterSubstrateBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterRevitalizationProcessOperation1 ;
+	rdfs:label "Substrate Broth Preparation Process Operation 1" .
+
+lca:AcetobacterRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter Revitalization Process Operation 1" .
+
+lca:AcetobacterIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Incubation Process Operation 1" .
+
+lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Final Volume Check/Addition Process Operation 1" .
+
+lca:AcetobacterSubstrateAlcoholConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	rdfs:label "Acetobacter Substrate Alcohol Concentration Check Process Action 1" .
+
+lca:AcetobacterSubstrateAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "AcetobacterSubstrate Addition Process Action 1" .
+
+lca:AcetobacterAlcoholAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	rdfs:label "Alcohol Addition Process Operation 1" .
+
+lca:AcetobacterSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	rdfs:label "Acetobacter Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterFermentationCycleProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Fermentation Cycle Process Operation X" .
+
+lca:AcetobacterDischargeProductCollectionProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterChargeSubstrateProcessOperationX ;
+	rdfs:label "Discharge Product Collection Process Operation X" .
+
+lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Substrate Alcohol/Product Concentration Check Process Action X" .
+
+lca:AcetobacterCollectProductProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Collect Product Process Action X" .
+
+lca:AcetobacterChargeSubstrateProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Charge Substrate Process Operation X" .
+
+lca:AcetobacterPasteurianusAceticAcidSiteRecipe1 a recipe:SiteRecipe ;
+	lca:derivedFrom lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter pasteurianus Acetic Acid Site Recipe 1" .
+
+lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:derivedFrom lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusAceticAcidSiteRecipe1 ;
+	rdfs:label "Acetobacter pasteurianus Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterPasteurianusStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 ;
+	lca:derivedFrom lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter pasteurianus Start Up Process Stage 1" .
+
+lca:AcetobacterPasteurianusGlucoseYeastAceticAcidBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateBrothPreparationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusRevitalizationProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Process Operation 1" .
+
+lca:AcetobacterPasteurianusRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterRevitalizationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Revitalization Process Operation 1" .
+
+lca:AcetobacterPasteurianusIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterIncubationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Incubation Process Operation 1" .
+
+lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusEthanolAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol Check/Final Volume Addition Process Operation 1" .
+
+lca:AcetobacterPasteurianusEthanolConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusGYABrothAdditionProcessAction1 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol Concentration Check Process Action 1" .
+
+lca:AcetobacterPasteurianusGYABrothAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Addition Process Action 1" .
+
+lca:AcetobacterPasteurianusEthanolAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol Addition Process Operation 1" .
+
+lca:AcetobacterPasteurianusSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 ;
+	lca:derivedFrom lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter pasteurianus Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterPasteurianusFermentationCycleProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Fermentation Cycle Process Operation 1" .
+
+lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusChargeGYAProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Discharge Acetic Acid Collection Process Operation 1" .
+
+lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusCollectAceticAcidProcessAction1 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol/Acetic Acid Concentration Check Process Action 1" .
+
+lca:AcetobacterPasteurianusCollectAceticAcidProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter pasteurianus Collect Acetic Acid Process Action 1" .
+
+lca:AcetobacterPasteurianusChargeGYAProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusFermentationCycleProcessOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Charge GYA Process Operation 1" .
+
+lca:AcetobacterPasteurianusFermentationCycleProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Fermentation Cycle Process Operation 2" .
+
+lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusChargeGYAProcessOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Discharge Acetic Acid Collection Process Operation 2" .
+
+lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction2 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusCollectAceticAcidProcessAction2 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol/Acetic Acid Concentration Check Process Action 2" .
+
+lca:AcetobacterPasteurianusCollectAceticAcidProcessAction2 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter pasteurianus Collect Acetic Acid Process Action 2" .
+
+lca:AcetobacterPasteurianusChargeGYAProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusFermentationCycleProcessOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Charge GYA Process Operation 2" .
+
+lca:AcetobacterPasteurianusFermentationCycleProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Fermentation Cycle Process Operation 3" .
+
+lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusChargeGYAProcessOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Discharge Acetic Acid Collection Process Operation 3" .
+
+lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction3 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusCollectAceticAcidProcessAction3 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol/Acetic Acid Concentration Check Process Action 3" .
+
+lca:AcetobacterPasteurianusCollectAceticAcidProcessAction3 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter pasteurianus Collect Acetic Acid Process Action 3" .
+
+lca:AcetobacterPasteurianusChargeGYAProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	rdfs:label "Acetobacter pasteurianus Charge GYA Process Operation 3" .
+
+lca:AcetobacterPasteurianusMasterAceticAcidRecipe1 a recipe:MasterRecipe ;
+	lca:derivedFrom lca:AcetobacterPasteurianusAceticAcidSiteRecipe1 ;
+	rdfs:label "Acetobacter pasteurianus Master Acetic Acid Recipe 1" .
+
+lca:AcetobacterPasteurianusMasterAceticAcidFermentationProcedure1 a recipe:ProcedureRecipeComponent ;
+	lca:derivedFrom lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterAceticAcidRecipe1 ;
+	rdfs:label "Acetobacter pasteurianus Master Acetic Acid Fermentation Procedure 1" .
+
+lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterAceticAcidFermentationProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	rdfs:label "Acetobacter pasteurianus Master Start Up Unit Procedure 1" .
+
+lca:AcetobacterPasteurianusMasterGlucoseYeastAceticAcidBrothPreparationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusGlucoseYeastAceticAcidBrothPreparationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterRevitalizationUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterRevitalizationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterIncubationUnitOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterIncubationUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Revitalization Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterIncubationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusIncubationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Incubation Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterEthanolAdditionUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Ethanol Check/Final Volume Addition Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterEthanolConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusEthanolConcentrationCheckProcessAction1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterGYABrothAdditionPhase1 ;
+	rdfs:label "Acetobacter pasteurianus Master Ethanol Concentration Check Phase 1" .
+
+lca:AcetobacterPasteurianusMasterGYABrothAdditionPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusGYABrothAdditionProcessAction1 ;
+	rdfs:label "Acetobacter pasteurianus Master GYA Broth Addition Phase 1" .
+
+lca:AcetobacterPasteurianusMasterEthanolAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusEthanolAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Ethanol Addition Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterAceticAcidFermentationProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter pasteurianus Master Semi-Continuous Unit Procedure 1" .
+
+lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusFermentationCycleProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Fermentation Cycle Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Master Discharge Acetic Acid Collection Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase1 ;
+	rdfs:label "Acetobacter pasteurianus Master Ethanol/Acetic Acid Concentration Check Phase 1" .
+
+lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusCollectAceticAcidProcessAction1 ;
+	rdfs:label "Acetobacter pasteurianus Master Collect Acetic Acid Phase 1" .
+
+lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusChargeGYAProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Master Charge GYA Unit Operation 1" .
+
+lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusFermentationCycleProcessOperation2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Master Fermentation Cycle Unit Operation 2" .
+
+lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Master Discharge Acetic Acid Collection Unit Operation 2" .
+
+lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase2 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase2 ;
+	rdfs:label "Acetobacter pasteurianus Master Ethanol/Acetic Acid Concentration Check Phase 2" .
+
+lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase2 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusCollectAceticAcidProcessAction2 ;
+	rdfs:label "Acetobacter pasteurianus Master Collect Acetic Acid Phase 2" .
+
+lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusChargeGYAProcessOperation2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Master Charge GYA Unit Operation 2" .
+
+lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusFermentationCycleProcessOperation3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Master Fermentation Cycle Unit Operation 3" .
+
+lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Master Discharge Acetic Acid Collection Unit Operation 3" .
+
+lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase3 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase3 ;
+	rdfs:label "Acetobacter pasteurianus Master Ethanol/Acetic Acid Concentration Check Phase 3" .
+
+lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase3 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusCollectAceticAcidProcessAction3 ;
+	rdfs:label "Acetobacter pasteurianus Master Collect Acetic Acid Phase 3" .
+
+lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusChargeGYAProcessOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Master Charge GYA Unit Operation 3" .
+		
+lca:MasterAceticAcidBioreactorEngineeredSystemRequirementSpecification1 a lca:EngineeredSystemRequirementSpecification ;
+	lca:hasPrescribedToParticipateIn lca:AcetobacterPasteurianusMasterAceticAcidRecipe1 ;
+	iof:prescribes iof:EngineeredSystem ;
+	rdfs:label "Master Acetic Acid Bioreactor Engineered System Requirement Specification 1" .
+
+lca:AcetobacterPasteurianusControlAceticAcidRecipe1 a recipe:ControlRecipe ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterAceticAcidRecipe1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlAceticAcidBatchRun1;
+	rdfs:label "Acetobacter pasteurianus Control Acetic Acid Recipe 1" .
+
+lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 a recipe:ProcedureRecipeComponent ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterAceticAcidFermentationProcedure1 ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1;
+	rdfs:label "Acetobacter pasteurianus Control Acetic Acid Fermentation Procedure 1" .
+
+lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	rdfs:label "Acetobacter pasteurianus Control Start Up Unit Procedure 1" .
+
+lca:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterGlucoseYeastAceticAcidBrothPreparationUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlRevitalizationUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Control Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlRevitalizationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterRevitalizationUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlIncubationUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Control Revitalization Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlIncubationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterIncubationUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlIncubationManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Control Incubation Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
+	rdfs:label "Acetobacter pasteurianus Control Ethanol Check/Final Volume Addition Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlEthanolConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolConcentrationCheckPhase1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlEthanolConcentrationCheckManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
+	rdfs:label "Acetobacter pasteurianus Control Ethanol Concentration Check Phase 1" .
+
+lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterGYABrothAdditionPhase1 ;
+	rdfs:label "Acetobacter pasteurianus Control GYA Broth Addition Phase 1" .
+
+lca:AcetobacterPasteurianusControlEthanolAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAdditionUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Control Ethanol Addition Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+	rdfs:label "Acetobacter pasteurianus Control Semi-Continuous Unit Procedure 1" .
+
+lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlChargeGYAUnitOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlCollectAceticAcidPhase1 ;
+	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Phase 1" .
+
+lca:AcetobacterPasteurianusControlCollectAceticAcidPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1;
+	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Phase 1" .
+
+lca:AcetobacterPasteurianusControlChargeGYAUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Control Charge GYA Unit Operation 1" .
+
+lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation2 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Unit Operation 2" .
+
+lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlChargeGYAUnitOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Unit Operation 2" .
+
+lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase2 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase2 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess2;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlCollectAceticAcidPhase2 ;
+	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Phase 2" .
+
+lca:AcetobacterPasteurianusControlCollectAceticAcidPhase2 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase2 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2;
+	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Phase 2" .
+
+lca:AcetobacterPasteurianusControlChargeGYAUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation2 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Control Charge GYA Unit Operation 2" .
+
+lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation3 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Unit Operation 3" .
+
+lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlChargeGYAUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Unit Operation 3" .
+
+lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase3 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase3 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlCollectAceticAcidPhase3 ;
+	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Phase 3" .
+
+lca:AcetobacterPasteurianusControlCollectAceticAcidPhase3 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase3 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3;
+	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Phase 3" .
+
+lca:AcetobacterPasteurianusControlChargeGYAUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	lca:prescribes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3;
+	lca:derivedFrom lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Control Charge GYA Unit Operation 3" .
+
+lca:ControlAceticAcidBioreactorEngineeredSystemRequirementSpecification1 a lca:EngineeredSystemRequirementSpecification ;
+	lca:hasPrescribedToParticipateIn lca:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
+	lca:derivedFrom lca:MasterAceticAcidBioreactorEngineeredSystemRequirementSpecification1 ;
+	iof:prescribes lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Bioreactor Engineered System Requirement Specification 1" .
+
+lca:ControlAceticAcidBioreactorEngineeredSystem1 a iof:EngineeredSystem ;
+	lca:participatesIn lca:AcetobacterPasteurianusControlAceticAcidBatchRun1;
+	rdfs:label "Control Acetic Acid Bioreactor Engineered System 1" .
+
+lca:ControlAceticAcidBioreactorVessel1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Bioreactor Vessel 1" .
+
+lca:ControlAceticAcidBioreactorElectricalEquipmentBox1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Bioreactor Electrical Equipment Box 1" .
+
+lca:ControlAceticAcidOxygenSensor1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Oxygen Sensor 1" .
+
+lca:ControlAceticAcidTemperatureSensor1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Temperature Sensor 1" .
+
+lca:ControlAceticAcidVentilationTube1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Ventilation Tube 1" .
+
+lca:ControlAceticAcidEthanolSupplyingTube1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Ethanol Supplying Tube 1" .
+
+lca:ControlAceticAcidRecyclingPump1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Recycling Pump 1" .
+
+lca:ControlAceticAcidHeatExchanger1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Heat Exchanger 1" .
+
+lca:ControlAceticAcidVenturiAirValve1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Venturi Air Valve 1" .
+
+lca:ControlAceticAcidVenturiEthanolValve1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Venturi Ethanol Valve 1" .
+
+lca:ControlAceticAcidVinegarOutputValve1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Vinegar Output Valve 1" .
+
+lca:ControlAceticAcidEthanolInputValve1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Ethanol Input Valve 1" .
+
+lca:ControlAceticAcidEthanolInputCanister1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Ethanol Input Canister 1" .
+
+lca:ControlAceticAcidVinegarOutputCanister1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Vinegar Output Canister 1" .
+
+lca:ControlAceticAcidDrainingAndCleaningValve1 a iof:Assembly ;
+	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+	rdfs:label "Control Acetic Acid Draining & Cleaning Valve 1" .
