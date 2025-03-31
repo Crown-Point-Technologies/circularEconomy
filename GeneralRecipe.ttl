@@ -1,0 +1,77 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix recipe: <https://spec.industrialontologies.org/ontology/recipe/> .
+@prefix lca: <https://spec.industrialontologies.org/ontology/lca/core/> .
+
+lca:AcetobacterAceticAcidGeneralRecipe1 a recipe:GeneralRecipe ;
+	rdfs:label "Acetobacter Acetic Acid General Recipe 1" .
+
+lca:AcetobacterAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter Start Up Process Stage 1" .
+
+lca:AcetobacterSubstrateBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterRevitalizationProcessOperation1 ;
+	rdfs:label "Substrate Broth Preparation Process Operation 1" .
+
+lca:AcetobacterRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter Revitalization Process Operation 1" .
+
+lca:AcetobacterIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Incubation Process Operation 1" .
+
+lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Final Volume Check/Addition Process Operation 1" .
+
+lca:AcetobacterSubstrateAlcoholConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	rdfs:label "Acetobacter Substrate Alcohol Concentration Check Process Action 1" .
+
+lca:AcetobacterSubstrateAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "AcetobacterSubstrate Addition Process Action 1" .
+
+lca:AcetobacterAlcoholAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	rdfs:label "Alcohol Addition Process Operation 1" .
+
+lca:AcetobacterSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	rdfs:label "Acetobacter Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterFermentationCycleProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Fermentation Cycle Process Operation X" .
+
+lca:AcetobacterDischargeProductCollectionProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterChargeSubstrateProcessOperationX ;
+	rdfs:label "Discharge Product Collection Process Operation X" .
+
+lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Substrate Alcohol/Product Concentration Check Process Action X" .
+
+lca:AcetobacterCollectProductProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Collect Product Process Action X" .
+
+lca:AcetobacterChargeSubstrateProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Charge Substrate Process Operation X" .

@@ -1,0 +1,237 @@
+
+<https://spec.industrialontologies.org/ontology/lca/core> a <http://www.w3.org/2002/07/owl#Ontology>;
+  <http://www.w3.org/2002/07/owl#imports> <http://purl.obolibrary.org/obo/bfo.owl>,
+    <https://spec.industrialontologies.org/ontology/core/Core/>, <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/>,
+    <https://spec.industrialontologies.org/ontology/recipe/>, <https://spec.industrialontologies.org/ontology/material/>,
+    <https://spec.industrialontologies.org/ontology/physical/>, <https://spec.industrialontologies.org/ontology/manufacturingexecution/>,
+    <https://spec.industrialontologies.org/ontology/monitoringandcontrol/>, <https://spec.industrialontologies.org/ontology/parameter/>,
+    <http://gioUbbiali.github.io/sco/sco.owl>;
+  <http://purl.org/dc/terms/title> "Life Cycle Assessment Ontology" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess>;
+  <http://purl.org/dc/terms/title> "life cycle inventory analysis";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "phase of life cycle assessment involving the compilation and quantifica-tion of inputs and outputs for a product throughout its life cycle" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess>;
+  <http://purl.org/dc/terms/title> "life cycle assessment process";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "compilation and evaluation of the inputs, outputs and the potential environmental impacts of a product system throughout its life cycle" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#LifeCycleImpactAssessment>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess>;
+  <http://purl.org/dc/terms/title> "life cycle impact assessment";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "phase of life cycle assessment aimed at understanding and evaluating the magnitude and significance of the potential environmental impacts for a product system throughout the life cycle of the product" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryResult>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity>;
+  <http://purl.org/dc/terms/title> "life cycle inventory result";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "outcome of a life cycle inventory analysis that catalogues the flows cross-ing the system boundary and provides the starting point for life cycle im-pact assessment" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity>;
+  <http://purl.org/dc/terms/title> "impact indicator";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "quantifiable representation of an impact category" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAnalysisObjectiveSpecification>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ObjectiveSpecification>;
+  <http://purl.org/dc/terms/title> "life cycle analysis objective specification" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAnalysisSpecification>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification>;
+  <http://purl.org/dc/terms/title> "life cycle analysis specification" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#lcaSpecHasPartLcaObjSpec>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.obolibrary.org/obo/BFO_0000178>;
+  <http://purl.org/dc/terms/title> "has part LCA Objective Specification";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAnalysisObjectiveSpecification>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAnalysisSpecification> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#prescribesLCAAssessmentProcess>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://spec.industrialontologies.org/ontology/core/Core/prescribes>;
+  <http://purl.org/dc/terms/title> "prescribes LCA Assessment Process";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAnalysisSpecification> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#isAchievedByAtSomeTimeLCAAssessmentProcess>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://spec.industrialontologies.org/ontology/core/Core/isAchievedByAtSomeTime>;
+  <http://purl.org/dc/terms/title> "is achieved by at some time LCA Assessment Process";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAnalysisObjectiveSpecification> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#hasPartLCAInventoryAnalysis>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.obolibrary.org/obo/BFO_0000178>;
+  <http://purl.org/dc/terms/title> "has part LCA Inventory Analysis";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#hasPartLCAImpactAssessment>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.obolibrary.org/obo/BFO_0000178>;
+  <http://purl.org/dc/terms/title> "has part LCA Impact Assessment";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleImpactAssessment>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#FlowIdentification> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess>;
+  <http://purl.org/dc/terms/title> "flow identification" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#hasPartFlowIdentification>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.obolibrary.org/obo/BFO_0000178>;
+  <http://purl.org/dc/terms/title> "has part Flow Identification";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#FlowIdentification>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#FlowRole> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023>;
+  <http://purl.org/dc/terms/title> "flow role" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#hasOutputFlowRole> a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://spec.industrialontologies.org/ontology/core/Core/hasOutput>;
+  <http://purl.org/dc/terms/title> "has output Flow Role";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#FlowRole>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#FlowIdentification> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#hasOutputLCAInventoryResult>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://spec.industrialontologies.org/ontology/core/Core/hasOutput>;
+  <http://purl.org/dc/terms/title> "has output LCA Inventory Result";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryResult>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#isInputOfLCAImpactAssessment>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://spec.industrialontologies.org/ontology/core/Core/isInputOf>;
+  <http://purl.org/dc/terms/title> "is input of LCA Impact Assessment";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleImpactAssessment>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryResult> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#hasOutputImpactIndicator>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://spec.industrialontologies.org/ontology/core/Core/hasOutput>;
+  <http://purl.org/dc/terms/title> "has output Impact Indicator";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#LifeCycleImpactAssessment> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#ProgramOperatorRole> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/AgentRole>;
+  <http://purl.org/dc/terms/title> "program operator role" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#ProductCategoryRule> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification>;
+  <http://purl.org/dc/terms/title> "product category rule";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "A set of rules and guidelines for developing EPD for a specific product or type of product. A PCR will specifically define a functional unit. While PCRs have been developed using international consensus processes, they can be industry-wide (for a given type of product) or for a specific product. PCR are particularly useful where the environmental impacts of products within a category group are to be compared." .
+
+<https://spec.industrialontologies.org/ontology/lca/core#FunctionalUnit> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/ValueExpression>;
+  <http://purl.org/dc/terms/title> "functional unit";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "A quantitative expression of the product being studied, addressing the function, the quantity, the performance, and the time. The functional unit is the same across alternatives being studied." .
+
+<https://spec.industrialontologies.org/ontology/lca/core#EnvironmentalProductDeclaration>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity>;
+  <http://purl.org/dc/terms/title> "environmental product declaration";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "An EPD is a standardized (ISO 14025/TR) and LCA based tool to communicate the environmental performance of a product or system, and is applicable worldwide for all interested companies and organizations." .
+
+<https://spec.industrialontologies.org/ontology/lca/core#EnvironmentalProductDeclarationCreationProcess>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess>;
+  <http://purl.org/dc/terms/title> "environmental product declaration creation process";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "The process of creating an EPD for the product that needs a declaration" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#EngineeredSystemRequirementSpecification>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/core/Core/RequirementSpecification>;
+  <http://purl.org/dc/terms/title> "engineered system requirement specification" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#CradletoGateSystemBoundary>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://gioUbbiali.github.io/sco/SCO_0000024>;
+  <http://purl.org/dc/terms/title> "cradle-to-gate system boundary" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#CradletograveSystemBoundary>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://gioUbbiali.github.io/sco/SCO_0000024>;
+  <http://purl.org/dc/terms/title> "cradle-to-grave system boundary" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#isMemberPartOfCradletograveSystemBoundryAtAllTimes>
+  a <http://www.w3.org/2002/07/owl#ObjectProperty>;
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.obolibrary.org/obo/BFO_0000173>;
+  <http://purl.org/dc/terms/title> "is Member Part of Cradle-to-Grave System Boundary at all times";
+  <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.industrialontologies.org/ontology/lca/core#CradletograveSystemBoundary>;
+  <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.industrialontologies.org/ontology/lca/core#CradletoGateSystemBoundary> .
+
+<https://spec.industrialontologies.org/ontology/lca/core#EnvironmentalImpactIndicator>
+  a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "environmental impact indicator" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#MaterialIntensity> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "material intensity";
+  <http://www.w3.org/2004/02/skos/core#example> "For methanol carbonylation, raw materials input is methanol 13,612 kg/h   CO 12,273 kg/h,for an acetic acid production of 25,000 kg/h. The material intensity is: wasted materials = 0.0354 kg/kg.";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "the mass of wasted materials per unit output";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom>
+    """Ritthoff, M., Rohn, H & Liedtke, C., (2002). Calculating MIPS: Resource productivity of products and services. Wuppertal Spezial, Wuppertal Institute for Climate, Environment and Energy, volume 27, number 27e. 
+
+Dimian, A, & Kiss, A., (2022). Novel energy efficient process for acetic acidproduction by methanol carbonylation.  Chemical Engineering Research and Design, 159, 1-12.""" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#MaterialEfficiency> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "material efficiency";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "the ratio of output of products to input of raw materials" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#EnergyIntensity> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "energy intensity" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#WaterConsumption> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "water consumption" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#ToxicEmissions> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "toxic emissions" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#PollutantEmissions> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "pollutant emissions" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#GreenhouseGasEmissions> a
+    <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/lca/core#ImpactIndicator>;
+  <http://purl.org/dc/terms/title> "greenhouse gas emissions" .
+
+<https://spec.industrialontologies.org/ontology/lca/core#StoichiometricYield> a <http://www.w3.org/2002/07/owl#Class>;
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.industrialontologies.org/ontology/monitoringandcontrol/PerformanceIndicatorMeasurement>;
+  <http://purl.org/dc/terms/title> "stoichiometric yield";
+  <http://www.w3.org/2004/02/skos/core#example> """The stoichiometric yield was evaluated by calculating the moles of acetic acid produced per mole of ethanol consumed in the liquid
+medium.""";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition>
+    "A theoretical yield based upon the stoichiometry of the experiment.";
+  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom>
+    """https://chem.libretexts.org/Bookshelves/Introductory_Chemistry/Introductory_Chemistry_(CK-12)/12:_Stoichiometry/12.09:_Theoretical_Yield_and_Percent_Yield
+
+Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H., Tounkara, L. S., Guiro, A. T., Delvigne, F., & Thonart, P. (2022). Acetobacter senegalensis            isolated from mango fruits: Its polyphasic characterization and adaptation to protect against stressors in the industrial production of vinegar: A Review. Journal of Applied Microbiology, 132(6), 4130–4149. https://doi.org/10.1111/jam.15495""" .

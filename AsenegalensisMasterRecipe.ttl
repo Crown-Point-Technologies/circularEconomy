@@ -1,0 +1,897 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix recipe: <https://spec.industrialontologies.org/ontology/recipe/> .
+@prefix lca: <https://spec.industrialontologies.org/ontology/lca/core/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+
+lca:AcetobacterAceticAcidGeneralRecipe1 a recipe:GeneralRecipe ;
+	rdfs:label "Acetobacter Acetic Acid General Recipe 1" .
+
+lca:AcetobacterAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter Start Up Process Stage 1" .
+
+lca:AcetobacterSubstrateBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterRevitalizationProcessOperation1 ;
+	rdfs:label "Substrate Broth Preparation Process Operation 1" .
+
+lca:AcetobacterRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter Revitalization Process Operation 1" .
+
+lca:AcetobacterIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Incubation Process Operation 1" .
+
+lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Final Volume Check/Addition Process Operation 1" .
+
+lca:AcetobacterSubstrateAlcoholConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	rdfs:label "Acetobacter Substrate Alcohol Concentration Check Process Action 1" .
+
+lca:AcetobacterSubstrateAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "AcetobacterSubstrate Addition Process Action 1" .
+
+lca:AcetobacterAlcoholAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	rdfs:label "Alcohol Addition Process Operation 1" .
+
+lca:AcetobacterSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	rdfs:label "Acetobacter Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterFermentationCycleProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Fermentation Cycle Process Operation X" .
+
+lca:AcetobacterDischargeProductCollectionProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterChargeSubstrateProcessOperationX ;
+	rdfs:label "Discharge Product Collection Process Operation X" .
+
+lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Substrate Alcohol/Product Concentration Check Process Action X" .
+
+lca:AcetobacterCollectProductProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Collect Product Process Action X" .
+
+lca:AcetobacterChargeSubstrateProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Charge Substrate Process Operation X" .
+
+lca:AcetobacterSenegalensisAceticAcidSiteRecipe1 a recipe:SiteRecipe ;
+	lca:derivedFrom lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter senegalensis Acetic Acid Site Recipe 1" .
+
+lca:AcetobacterSenegalensisAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:derivedFrom lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisAceticAcidSiteRecipe1 ;
+	rdfs:label "Acetobacter senegalensis Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterSenegalensisStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisAceticAcidFermentationProcess1 ;
+	lca:derivedFrom lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter senegalensis Start Up Process Stage 1" .
+
+lca:AcetobacterSenegalensisGlucoseYeastAceticAcidBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateBrothPreparationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisRevitalizationProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Process Operation 1" .
+
+lca:AcetobacterSenegalensisRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterRevitalizationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Revitalization Process Operation 1" .
+
+lca:AcetobacterSenegalensisIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterIncubationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Incubation Process Operation 1" .
+
+lca:AcetobacterSenegalensisEthanolCheckFinalVolumeAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisEthanolAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Ethanol Check/Final Volume Addition Process Operation 1" .
+
+lca:AcetobacterSenegalensisEthanolConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisGYABrothAdditionProcessAction1 ;
+	rdfs:label "Acetobacter senegalensis Ethanol Concentration Check Process Action 1" .
+
+lca:AcetobacterSenegalensisGYABrothAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	rdfs:label "Acetobacter senegalensis GYA Broth Addition Process Action 1" .
+
+lca:AcetobacterSenegalensisEthanolAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Ethanol Addition Process Operation 1" .
+
+lca:AcetobacterSenegalensisSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisAceticAcidFermentationProcess1 ;
+	lca:derivedFrom lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter senegalensis Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 1" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 1" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction1 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 1" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 1" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation2 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 1" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation2 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 2" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation2 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 2" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction2 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction2 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 2" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction2 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 2" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation3 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 2" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation3 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 3" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation3 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 3" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction3 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction3 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 3" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction3 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 3" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation4 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 3" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation4 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation4 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 4" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation4 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation4 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 4" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction4 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation4 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction4 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 4" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction4 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation4 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 4" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation4 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation5 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 4" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation5 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation5 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 5" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation5 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation5 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 5" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction5 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation5 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction5 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 5" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction5 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation5 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 5" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation5 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation6 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 5" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation6 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation6 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 6" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation6 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation6 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 6" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction6 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation6 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction6 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 6" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction6 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation6 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 6" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation6 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation7 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 6" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation7 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation7 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 7" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation7 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation7 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 7" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction7 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation7 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction7 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 7" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction7 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation7 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 7" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation7 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation8 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 7" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation8 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation8 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 8" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation8 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation8 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 8" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction8 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation8 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction8 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 8" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction8 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation8 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 8" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation8 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation9 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 8" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation9 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation9 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 9" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation9 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation9 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 9" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction9 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation9 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction9 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 9" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction9 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation9 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 9" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation9 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation10 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 9" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation10 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation10 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 10" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation10 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation10 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 10" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction10 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation10 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction10 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 10" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction10 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation10 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 10" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation10 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation11 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 10" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation11 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation11 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 11" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation11 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation11 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 11" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction11 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation11 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction11 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 11" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction11 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation11 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 11" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation11 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisFermentationCycleProcessOperation12 ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 11" .
+
+lca:AcetobacterSenegalensisFermentationCycleProcessOperation12 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation12 ;
+	rdfs:label "Acetobacter senegalensis Fermentation Cycle Process Operation 12" .
+
+lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation12 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisChargeGYAProcessOperation12 ;
+	rdfs:label "Acetobacter senegalensis Discharge Acetic Acid Collection Process Operation 12" .
+
+lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction12 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation12 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisCollectAceticAcidProcessAction12 ;
+	rdfs:label "Acetobacter senegalensis Ethanol/Acetic Acid Concentration Check Process Action 12" .
+
+lca:AcetobacterSenegalensisCollectAceticAcidProcessAction12 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation12 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Acetobacter senegalensis Collect Acetic Acid Process Action 12" .
+
+lca:AcetobacterSenegalensisChargeGYAProcessOperation12 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	rdfs:label "Acetobacter senegalensis Charge GYA Process Operation 12" .
+
+lca:AcetobacterSenegalensisMasterAceticAcidRecipe1 a recipe:MasterRecipe ;
+	lca:derivedFrom lca:AcetobacterSenegalensisAceticAcidSiteRecipe1 ;
+	rdfs:label "Acetobacter senegalensis Master Acetic Acid Recipe 1" .
+
+lca:AcetobacterSenegalensisMasterAceticAcidFermentationProcedure1 a recipe:ProcedureRecipeComponent ;
+	lca:derivedFrom lca:AcetobacterSenegalensisAceticAcidFermentationProcess1 ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterAceticAcidRecipe1 ;
+	rdfs:label "Acetobacter senegalensis Master Acetic Acid Fermentation Procedure 1" .
+
+lca:AcetobacterSenegalensisMasterStartUpUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterAceticAcidFermentationProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	rdfs:label "Acetobacter senegalensis Master Start Up Unit Procedure 1" .
+
+lca:AcetobacterSenegalensisMasterGlucoseYeastAceticAcidBrothPreparationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisGlucoseYeastAceticAcidBrothPreparationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterRevitalizationProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Master Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterRevitalizationProcessOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisRevitalizationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Master Revitalization Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterIncubationProcessOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisIncubationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Master Incubation Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterEthanolCheckFinalVolumeAdditionProcessOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterGYABrothAdditionPhase1 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol Check/Final Volume Addition Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterEthanolConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolConcentrationCheckProcessAction1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterGYABrothAdditionPhase1 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol Concentration Check Phase 1" .
+
+lca:AcetobacterSenegalensisMasterGYABrothAdditionPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisGYABrothAdditionProcessAction1 ;
+	rdfs:label "Acetobacter senegalensis Master GYA Broth Addition Phase 1" .
+
+lca:AcetobacterSenegalensisMasterEthanolAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterStartUpUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol Addition Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterAceticAcidFermentationProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter senegalensis Master Semi-Continuous Unit Procedure 1" .
+
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation1 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase1 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 1" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase1 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction1 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 1" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation2 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 1" .
+
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 2" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation2 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 2" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase2 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase2 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 2" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase2 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction2 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 2" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation2 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation3 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 2" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 3" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation3 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 3" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase3 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase3 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 3" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase3 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction3 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 3" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation3 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation4 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 3" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation4 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation4 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation4 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 4" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation4 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation4 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation4 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 4" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase4 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation4 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction4 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase4 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 4" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase4 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation4 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction4 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 4" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation4 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation4 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation4 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation5 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 4" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation5 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation5 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation5 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 5" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation5 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation5 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation5 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 5" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase5 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation5 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction5 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase5 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 5" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase5 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation5 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction5 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 5" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation5 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation5 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation5 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation6 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 5" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation6 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation6 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation6 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 6" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation6 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation6 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation6 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 6" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase6 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation6 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction6 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase6 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 6" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase6 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation6 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction6 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 6" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation6 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation6 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation6 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation7 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 6" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation7 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation7 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation7 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 7" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation7 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation7 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation7 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 7" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase7 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation7 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction7 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase7 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 7" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase7 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation7 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction7 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 7" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation7 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation7 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation7 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation8 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 7" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation8 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation8 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation8 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 8" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation8 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation8 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation8 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 8" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase8 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation8 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction8 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase8 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 8" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase8 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation8 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction8 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 8" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation8 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation8 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation8 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation9 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 8" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation9 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation9 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation9 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 9" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation9 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation9 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation9 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 9" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase9 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation9 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction9 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase9 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 9" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase9 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation9 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction9 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 9" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation9 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation9 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation9 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation10 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 9" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation10 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation10 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation10 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 10" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation10 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation10 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation10 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 10" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase10 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation10 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction10 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase10 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 10" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase10 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation10 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction10 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 10" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation10 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation10 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation10 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation11 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 10" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation11 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation11 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation11 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 11" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation11 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation11 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation11 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 11" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase11 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation11 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction11 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase11 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 11" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase11 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation11 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction11 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 11" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation11 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation11 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation11 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation12 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 11" .
+	
+lca:AcetobacterSenegalensisMasterFermentationCycleUnitOperation12 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisFermentationCycleProcessOperation12 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation12 ;
+	rdfs:label "Acetobacter senegalensis Master Fermentation Cycle Unit Operation 12" .
+
+lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation12 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterSemiContinuousUnitProcedure1 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisDischargeAceticAcidCollectionProcessOperation12 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation12 ;
+	rdfs:label "Acetobacter senegalensis Master Discharge Acetic Acid Collection Unit Operation 12" .
+
+lca:AcetobacterSenegalensisMasterEthanolAceticAcidConcentrationCheckPhase12 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation12 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisEthanolAceticAcidConcentrationCheckProcessAction12 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase12 ;
+	rdfs:label "Acetobacter senegalensis Master Ethanol/Acetic Acid Concentration Check Phase 12" .
+
+lca:AcetobacterSenegalensisMasterCollectAceticAcidPhase12 a recipe:PhaseRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation12 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisCollectAceticAcidProcessAction12 ;
+	rdfs:label "Acetobacter senegalensis Msater Collect Acetic Acid Phase 12" .
+
+lca:AcetobacterSenegalensisMasterChargeGYAUnitOperation12 a recipe:UnitOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSenegalensisMasterDischargeAceticAcidCollectionUnitOperation12 ;
+	lca:derivedFrom lca:AcetobacterSenegalensisChargeGYAProcessOperation12 ;
+	rdfs:label "Acetobacter senegalensis Master Charge GYA Unit Operation 12" .
+
+lca:MasterAceticAcidBioreactorEngineeredSystemRequirementSpecification1 a lca:EngineeredSystemRequirementSpecification ;
+	lca:hasPrescribedToParticipateIn lca:AcetobacterSenegalensisMasterAceticAcidRecipe1 ;
+	iof:prescribes iof:EngineeredSystem ;
+	rdfs:label "Master Acetic Acid Bioreactor Engineered System Requirement Specification 1" .
+

@@ -1,0 +1,629 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix recipe: <https://spec.industrialontologies.org/ontology/recipe/> .
+@prefix lca: <https://spec.industrialontologies.org/ontology/lca/core/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> .
+
+lca:AcetobacterAceticAcidGeneralRecipe1 a recipe:GeneralRecipe ;
+	rdfs:label "Acetobacter Acetic Acid General Recipe 1" .
+
+lca:AcetobacterAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter Start Up Process Stage 1" .
+
+lca:AcetobacterSubstrateBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterRevitalizationProcessOperation1 ;
+	rdfs:label "Substrate Broth Preparation Process Operation 1" .
+
+lca:AcetobacterRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterIncubationProcessOperation1 ;
+	rdfs:label "Acetobacter Revitalization Process Operation 1" .
+
+lca:AcetobacterIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Incubation Process Operation 1" .
+
+lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter Final Volume Check/Addition Process Operation 1" .
+
+lca:AcetobacterSubstrateAlcoholConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	rdfs:label "Acetobacter Substrate Alcohol Concentration Check Process Action 1" .
+
+lca:AcetobacterSubstrateAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	rdfs:label "AcetobacterSubstrate Addition Process Action 1" .
+
+lca:AcetobacterAlcoholAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterStartUpProcessStage1 ;
+	rdfs:label "Alcohol Addition Process Operation 1" .
+
+lca:AcetobacterSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterAceticAcidFermentationProcess1 ;
+	rdfs:label "Acetobacter Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterFermentationCycleProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Fermentation Cycle Process Operation X" .
+
+lca:AcetobacterDischargeProductCollectionProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterChargeSubstrateProcessOperationX ;
+	rdfs:label "Discharge Product Collection Process Operation X" .
+
+lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterCollectProductProcessActionX ;
+	rdfs:label "Substrate Alcohol/Product Concentration Check Process Action X" .
+
+lca:AcetobacterCollectProductProcessActionX a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	rdfs:label "Collect Product Process Action X" .
+
+lca:AcetobacterChargeSubstrateProcessOperationX a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Charge Substrate Process Operation X" .
+
+lca:AcetobacterPasteurianusAceticAcidSiteRecipe1 a recipe:SiteRecipe ;
+	lca:derivedFrom lca:AcetobacterAceticAcidGeneralRecipe1 ;
+	rdfs:label "Acetobacter pasteurianus Acetic Acid Site Recipe 1" .
+
+lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 a recipe:ProcessRecipeComponent ;
+	lca:derivedFrom lca:AcetobacterAceticAcidFermentationProcess1 ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusAceticAcidSiteRecipe1 ;
+	rdfs:label "Acetobacter pasteurianus Acetic Acid Fermentation Process 1" .
+
+lca:AcetobacterPasteurianusStartUpProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 ;
+	lca:derivedFrom lca:AcetobacterStartUpProcessStage1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter pasteurianus Start Up Process Stage 1" .
+
+lca:AcetobacterPasteurianusGlucoseYeastAceticAcidBrothPreparationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateBrothPreparationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusRevitalizationProcessOperation1 ;
+	lca:hasPrescribedInput lca:GlucoseMaterialRequirementSpecification1, lca:FermentationYeastExtractMaterialRequirementSpecification1, lca:MagnesiumSulfateMaterialRequirementSpecification1, lca:DiammoniumPhosphateMaterialRequirementSpecification1, lca:AceticAcidMaterialRequirementSpecification1, lca:PotassiumHydroxideMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:GYABrothIntermediateMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Process Operation 1" .
+
+lca:GlucoseMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:GlucoseRawMaterial1 ;
+	rdfs:label "Glucose Material Requirement Specification 1" .
+
+lca:GlucoseRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:GlucoseRawMaterialQuantity1 ;
+	rdfs:label "Glucose Raw Material 1" .
+
+lca:GlucoseRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:GlucoseRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:GlucoseRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 ;
+	rdfs:label "Glucose Raw Material Quantity 1" .
+
+lca:GlucoseRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "20" ;
+	lca:hasQuantityUnit lca:GlucoseRawMaterialQuantityUnit1 ;
+	rdfs:label "Glucose Raw Material Quantity Value 1" .
+
+lca:GlucoseRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "g/L" ;
+	rdfs:label "Glucose Raw Material Quantity Unit 1" .
+
+lca:GlucoseRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 a lca:AmountOfSubstanceConcentrationQuantityKind ;
+	rdfs:label "Glucose Raw Material Amount of Substance Per Unit Volume Quantity Kind 1" .
+
+lca:FermentationYeastExtractMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:FermentationYeastExtractRawMaterial1 ;
+	rdfs:label "Fermentation Yeast Extract Material Requirement Specification 1" .
+
+lca:FermentationYeastExtractRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:FermentationYeastExtractRawMaterialQuantity1 ;
+	rdfs:label "Fermentation Yeast Extract Raw Material 1" .
+
+lca:FermentationYeastExtractRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:FermentationYeastExtractRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:FermentationYeastExtractRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 ;
+	rdfs:label "Fermentation Yeast Extract Raw Material Quantity 1" .
+
+lca:FermentationYeastExtractRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "7.5" ;
+	lca:hasQuantityUnit lca:FermentationYeastExtractRawMaterialQuantityUnit1 ;
+	rdfs:label "Fermentation Yeast Extract Raw Material Quantity Value 1" .
+
+lca:FermentationYeastExtractRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "g/L" ;
+	rdfs:label "Fermentation Yeast Extract Raw Material Quantity Unit 1" .
+
+lca:FermentationYeastExtractRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 a lca:AmountOfSubstanceConcentrationQuantityKind ;
+	rdfs:label "Fermentation Yeast Extract Raw Material Amount of Substance Per Unit Volume Quantity Kind 1" .
+
+lca:MagnesiumSulfateMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:MagnesiumSulfateRawMaterial1 ;
+	rdfs:label "Magnesium Sulfate Material Requirement Specification 1" .
+
+lca:MagnesiumSulfateRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:MagnesiumSulfateRawMaterialQuantity1 ;
+	rdfs:label "Magnesium Sulfate Raw Material 1" .
+
+lca:MagnesiumSulfateRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:MagnesiumSulfateRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:MagnesiumSulfateRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 ;
+	rdfs:label "Magnesium Sulfate Raw Material Quantity 1" .
+
+lca:MagnesiumSulfateRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "1" ;
+	lca:hasQuantityUnit lca:MagnesiumSulfateRawMaterialQuantityUnit1 ;
+	rdfs:label "Magnesium Sulfate Raw Material Quantity Value 1" .
+
+lca:MagnesiumSulfateRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "g/L" ;
+	rdfs:label "Magnesium Sulfate Raw Material Quantity Unit 1" .
+
+lca:MagnesiumSulfateRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 a lca:AmountOfSubstanceConcentrationQuantityKind ;
+	rdfs:label "Magnesium Sulfate Raw Material Amount of Substance Per Unit Volume Quantity Kind 1" .
+
+lca:DiammoniumPhosphateMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:DiammoniumPhosphateRawMaterial1 ;
+	rdfs:label "Diammonium Phosphate Material Requirement Specification 1" .
+
+lca:DiammoniumPhosphateRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:DiammoniumPhosphateRawMaterialQuantity1 ;
+	rdfs:label "Diammonium Phosphate Raw Material 1" .
+
+lca:DiammoniumPhosphateRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:DiammoniumPhosphateRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:DiammoniumPhosphateRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 ;
+	rdfs:label "Diammonium Phosphate Raw Material Quantity 1" .
+
+lca:DiammoniumPhosphateRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "1" ;
+	lca:hasQuantityUnit lca:DiammoniumPhosphateRawMaterialQuantityUnit1 ;
+	rdfs:label "Diammonium Phosphate Raw Material Quantity Value 1" .
+
+lca:DiammoniumPhosphateRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "g/L" ;
+	rdfs:label "Diammonium Phosphate Raw Material Quantity Unit 1" .
+
+lca:DiammoniumPhosphateRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 a lca:AmountOfSubstanceConcentrationQuantityKind ;
+	rdfs:label "Diammonium Phosphate Raw Material Amount of Substance Per Unit Volume Quantity Kind 1" .
+
+lca:AceticAcidMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AceticAcidRawMaterial1 ;
+	rdfs:label "Acetic Acid Material Requirement Specification 1" .
+
+lca:AceticAcidRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:AceticAcidRawMaterialQuantity1 ;
+	rdfs:label "Acetic Acid Raw Material 1" .
+
+lca:AceticAcidRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:AceticAcidRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:AceticAcidRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 ;
+	rdfs:label "Acetic Acid Raw Material Quantity 1" .
+
+lca:AceticAcidRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "6.25" ;
+	lca:hasQuantityUnit lca:AceticAcidRawMaterialQuantityUnit1 ;
+	rdfs:label "Acetic Acid Raw Material Quantity Value 1" .
+
+lca:AceticAcidRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "g/L" ;
+	rdfs:label "Acetic Acid Raw Material Quantity Unit 1" .
+
+lca:AceticAcidRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 a lca:AmountOfSubstanceConcentrationQuantityKind ;
+	rdfs:label "Acetic Acid Raw Material Amount of Substance Per Unit Volume Quantity Kind 1" .
+
+lca:PotassiumHydroxideMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:PotassiumHydroxideRawMaterial1 ;
+	rdfs:label "Potassium Hydroxide Material Requirement Specification 1" .
+
+lca:PotassiumHydroxideRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:PotassiumHydroxideRawMaterialQuantity1 ;
+	rdfs:label "Potassium Hydroxide Raw Material 1" .
+
+lca:PotassiumHydroxideRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:PotassiumHydroxideRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:PotassiumHydroxideRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 ;
+	rdfs:label "Potassium Hydroxide Raw Material Quantity 1" .
+
+lca:PotassiumHydroxideRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "9" ;
+	lca:hasQuantityUnit lca:PotassiumHydroxideRawMaterialQuantityUnit1 ;
+	rdfs:label "Potassium Hydroxide Raw Material Quantity Value 1" .
+
+lca:PotassiumHydroxideRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "g/L" ;
+	rdfs:label "Potassium Hydroxide Raw Material Quantity Unit 1" .
+
+lca:PotassiumHydroxideRawMaterialAmountOfSubstancePerUnitVolumeQuantityKind1 a lca:AmountOfSubstanceConcentrationQuantityKind ;
+	rdfs:label "Potassium Hydroxide Raw Material Amount of Substance Per Unit Volume Quantity Kind 1" .
+
+lca:GYABrothIntermediateMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:GYABrothIntermediate1 ;
+	rdfs:label "GYA Broth Intermediate Material Requirement Specification 1" .
+
+lca:GYABrothIntermediate1 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:GYABrothIntermediateQuantity1 ;
+	rdfs:label "GYA Broth Intermediate 1" .
+
+lca:GYABrothIntermediateQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:GYABrothIntermediateQuantityValue1 ;
+	lca:hasQuantityKind lca:GYABrothIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "GYA Broth Intermediate Quantity 1" .
+
+lca:GYABrothIntermediateQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "70" ;
+	lca:hasQuantityUnit lca:GYABrothIntermediateQuantityUnit1 ;
+	rdfs:label "GYA Broth Intermediate Quantity Value 1" .
+
+lca:GYABrothIntermediateQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "L" ;
+	rdfs:label "GYA Broth Intermediate Quantity Unit 1" .
+
+lca:GYABrothIntermediateLiquidVolumeQuantityKind1 a lca:LiquidVolumeQuantityKind ;
+	rdfs:label "GYA Broth Intermediate Liquid Volume Quantity Kind 1" .
+
+lca:AcetobacterPasteurianusRevitalizationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterRevitalizationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusIncubationProcessOperation1 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusFreezeDriedMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusRevitalizedMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Revitalization Process Operation 1" .
+
+lca:AcetobacterPasteurianusFreezeDriedMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusPortionOfMaterial1 ;
+	rdfs:label "Acetobacter pasteurianus Freeze-Dried Material Requirement Specification 1" .
+
+lca:AcetobacterPasteurianusRevitalizedMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusPortionOfMaterial1 ;
+	rdfs:label "Acetobacter pasteurianus Revitalized Material Requirement Specification 1" .
+
+lca:AcetobacterPasteurianusPortionOfMaterial1 a lca:PortionOfMaterial ;
+	lca:hasState lca:AcetobacterPasteurianusPortionOfMaterialState1, lca:AcetobacterPasteurianusPortionOfMaterialState2 ;
+	lca:hasQuantity lca:AcetobacterPasteurianusPortionOfMaterialQuantity1 ;
+	rdfs:label "Acetobacter pasteurianus Portion of Material 1" .
+
+lca:AcetobacterPasteurianusPortionOfMaterialState1 a lca:State ;
+	lca:hasTextValue "Freeze-Dried" ;
+	rdfs:label "Acetobacter pasteurianus Portion of Material State 1" .
+
+lca:AcetobacterPasteurianusPortionOfMaterialState2 a lca:State ;
+	lca:hasTextValue "Revitalized" ;
+	rdfs:label "Acetobacter pasteurianus Portion of Material State 2" .
+
+lca:AcetobacterPasteurianusPortionOfMaterialStateTransition1 a lca:StateTransition ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusRevitalizationProcessOperation1 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusPortionOfMaterialState1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusPortionOfMaterialState2 ;
+	rdfs:label "Acetobacter pasteurianus Portion of Material State Transition 1" .
+
+lca:AcetobacterPasteurianusIncubationProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterIncubationProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:hasPrescribedInput lca:GYABrothIntermediateMaterialRequirementSpecification1, lca:AcetobacterPasteurianusRevitalizedMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothIntermediateMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Incubation Process Operation 1" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusGYABrothIntermediate1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Material Requirement Specification 1" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediate1 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:AcetobacterPasteurianusGYABrothIntermediateQuantity1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate 1" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:AcetobacterPasteurianusGYABrothIntermediateQuantityValue1 ;
+	lca:hasQuantityKind lca:AcetobacterPasteurianusGYABrothIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Quantity 1" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "70" ;
+	lca:hasQuantityUnit lca:AcetobacterPasteurianusGYABrothIntermediateQuantityUnit1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Quantity Value 1" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "L" ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Quantity Unit 1" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateLiquidVolumeQuantityKind1 a lca:LiquidVolumeQuantityKind ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Liquid Volume Quantity Kind 1" .
+
+lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFinalVolumeCheckAdditionProcessOperation1 ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusEthanolAdditionProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol Check/Final Volume Addition Process Operation 1" .
+
+lca:AcetobacterPasteurianusGYABrothAdditionProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusEthanolCheckFinalVolumeAdditionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAdditionProcessAction1 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothIntermediateMaterialRequirementSpecification1, lca:GYABrothIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Addition Process Action 1" .
+
+lca:GYABrothIntermediateMaterialRequirementSpecification2 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:GYABrothIntermediate2 ;
+	rdfs:label "GYA Broth Intermediate Material Requirement Specification 2" .
+
+lca:GYABrothIntermediate2 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:GYABrothIntermediateQuantity2 ;
+	rdfs:label "GYA Broth Intermediate 2" .
+
+lca:GYABrothIntermediateQuantity2 a lca:Quantity ;
+	lca:hasQuantityValue lca:GYABrothIntermediateQuantityValue2 ;
+	lca:hasQuantityKind lca:GYABrothIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "GYA Broth Intermediate Quantity 2" .
+
+lca:GYABrothIntermediateQuantityValue2 a lca:QuantityValue ;
+	lca:hasValue "30" ;
+	lca:hasQuantityUnit lca:GYABrothIntermediateQuantityUnit1 ;
+	rdfs:label "GYA Broth Intermediate Quantity Value 2" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateMaterialRequirementSpecification2 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusGYABrothIntermediate2 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Material Intermediate Requirement Specification 2" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediate2 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:AcetobacterPasteurianusGYABrothIntermediateQuantity2 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate 2" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateQuantity2 a lca:Quantity ;
+	lca:hasQuantityValue lca:AcetobacterPasteurianusGYABrothIntermediateQuantityValue2 ;
+	lca:hasQuantityKind lca:AcetobacterPasteurianusGYABrothIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Quantity 2" .
+
+lca:AcetobacterPasteurianusGYABrothIntermediateQuantityValue2 a lca:QuantityValue ;
+	lca:hasValue "100" ;
+	lca:hasQuantityUnit lca:AcetobacterPasteurianusGYABrothIntermediateQuantityUnit1 ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Intermediate Quantity Value 2" .
+
+lca:AcetobacterPasteurianusEthanolAdditionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusStartUpProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterAlcoholAdditionProcessOperation1 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothIntermediateMaterialRequirementSpecification2, lca:EthanolRawMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol Addition Process Operation 1" .
+
+lca:EthanolRawMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:EthanolRawMaterial1 ;
+	rdfs:label "Ethanol Raw Material Requirement Specification 1" .
+
+lca:EthanolRawMaterial1 a lca:RawMaterial ;
+	lca:hasQuantity lca:EthanolRawMaterialQuantity1 ;
+	rdfs:label "Ethanol Raw Material 1" .
+
+lca:EthanolRawMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:EthanolRawMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:EthanolRawMaterialLiquidVolumeQuantityKind1 ;
+	rdfs:label "Ethanol Raw Material Quantity 1" .
+
+lca:EthanolRawMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "100" ;
+	lca:hasQuantityUnit lca:EthanolRawMaterialQuantityUnit1 ;
+	rdfs:label "Ethanol Raw Material Quantity Value 1" .
+
+lca:EthanolRawMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "L" ;
+	rdfs:label "Ethanol Raw Material Quantity Unit 1" .
+
+lca:EthanolRawMaterialLiquidVolumeQuantityKind1 a lca:LiquidVolumeQuantityKind ;
+	rdfs:label "Ethanol Raw Material Liquid Volume Quantity Kind 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusGYABrothEthanolIntermediate1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Material Requirement Specification 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediate1 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantity1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityValue1 ;
+	lca:hasQuantityKind lca:AcetobacterPasteurianusGYABrothEthanolIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Quantity 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "200" ;
+	lca:hasQuantityUnit lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityUnit1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Quantity Value 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "L" ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Ethanol Intermediate Quantity Unit 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateLiquidVolumeQuantityKind1 a lca:LiquidVolumeQuantityKind ;
+	rdfs:label "Acetobacter pasteurianus GYA Broth Ethanol Intermediate Liquid Volume Quantity Kind 1" .
+
+lca:AcetobacterPasteurianusSemiContinuousProcessStage1 a recipe:ProcessStageRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusAceticAcidFermentationProcess1 ;
+	lca:derivedFrom lca:AcetobacterSemiContinuousProcessStage1 ;
+	rdfs:label "Acetobacter pasteurianus Semi-Continuous Process Stage 1" .
+
+lca:AcetobacterPasteurianusFermentationCycleProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus Fermentation Cycle Process Operation 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusGYABrothEthanolIntermediate2 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Material Requirement Specification 2" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediate2 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantity2 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate 2" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantity2 a lca:Quantity ;
+	lca:hasQuantityValue lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityValue2 ;
+	lca:hasQuantityKind lca:AcetobacterPasteurianusGYABrothEthanolIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Quantity 2" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityValue2 a lca:QuantityValue ;
+	lca:hasValue "200" ;
+	lca:hasQuantityUnit lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityUnit1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Quantity Value 2" .
+
+lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusChargeGYAProcessOperation1 ;
+	rdfs:label "Acetobacter pasteurianus Discharge Acetic Acid Collection Process Operation 1" .
+
+lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusCollectAceticAcidProcessAction1 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol/Acetic Acid Concentration Check Process Action 1" .
+
+lca:AcetobacterPasteurianusCollectAceticAcidProcessAction1 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation1 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AceticAcidIntermediateMaterialRequirementSpecification1, lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3 ;
+	rdfs:label "Acetobacter pasteurianus Collect Acetic Acid Process Action 1" .
+
+lca:AceticAcidIntermediateMaterialRequirementSpecification1 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AceticAcidIntermediate1 ;
+	rdfs:label "Acetic Acid Intermediate Material Requirement Specification 1" .
+
+lca:AceticAcidIntermediate1 a lca:RawMaterial ;
+	lca:hasQuantity lca:AceticAcidIntermediateMaterialQuantity1 ;
+	rdfs:label "Acetic Acid Intermediate Material 1" .
+
+lca:AceticAcidIntermediateMaterialQuantity1 a lca:Quantity ;
+	lca:hasQuantityValue lca:AceticAcidIntermediateMaterialQuantityValue1 ;
+	lca:hasQuantityKind lca:AceticAcidIntermediateMaterialLiquidVolumeQuantityKind1 ;
+	rdfs:label "Acetic Acid Intermediate Material Quantity 1" .
+
+lca:AceticAcidIntermediateMaterialQuantityValue1 a lca:QuantityValue ;
+	lca:hasValue "70" ;
+	lca:hasQuantityUnit lca:AceticAcidIntermediateMaterialQuantityUnit1 ;
+	rdfs:label "Acetic Acid Intermediate Material Quantity Value 1" .
+
+lca:AceticAcidIntermediateMaterialQuantityUnit1 a lca:QuantityUnit ;
+	lca:hasTextValue "L" ;
+	rdfs:label "Acetic Acid Intermediate Material Quantity Unit 1" .
+
+lca:AceticAcidIntermediateMaterialLiquidVolumeQuantityKind1 a lca:LiquidVolumeQuantityKind ;
+	rdfs:label "Acetic Acid Intermediate Material Liquid Volume Quantity Kind 1" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3 a lca:MaterialRequirementSpecification ;
+	lca:prescribes lca:AcetobacterPasteurianusGYABrothEthanolIntermediate3 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Material Requirement Specification 3" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediate3 a lca:PortionOfMaterial ;
+	lca:hasQuantity lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantity3 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate 3" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantity3 a lca:Quantity ;
+	lca:hasQuantityValue lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityValue3 ;
+	lca:hasQuantityKind lca:AcetobacterPasteurianusGYABrothEthanolIntermediateLiquidVolumeQuantityKind1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Quantity 2" .
+
+lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityValue3 a lca:QuantityValue ;
+	lca:hasValue "130" ;
+	lca:hasQuantityUnit lca:AcetobacterPasteurianusGYABrothEthanolIntermediateQuantityUnit1 ;
+	rdfs:label "Acetobacter Pasteurianus GYA Broth Ethanol Intermediate Quantity Value 3" .
+
+lca:AcetobacterPasteurianusChargeGYAProcessOperation1 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusFermentationCycleProcessOperation2 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3, lca:GYABrothIntermediateMaterialRequirementSpecification3 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Charge GYA Process Operation 1" .
+
+lca:AcetobacterPasteurianusFermentationCycleProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus Fermentation Cycle Process Operation 2" .
+
+lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusChargeGYAProcessOperation2 ;
+	rdfs:label "Acetobacter pasteurianus Discharge Acetic Acid Collection Process Operation 2" .
+
+lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction2 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusCollectAceticAcidProcessAction2 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol/Acetic Acid Concentration Check Process Action 2" .
+
+lca:AcetobacterPasteurianusCollectAceticAcidProcessAction2 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation2 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AceticAcidIntermediateMaterialRequirementSpecification1, lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3 ;
+	rdfs:label "Acetobacter pasteurianus Collect Acetic Acid Process Action 2" .
+
+lca:AcetobacterPasteurianusChargeGYAProcessOperation2 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusFermentationCycleProcessOperation3 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3, lca:GYABrothIntermediateMaterialRequirementSpecification3 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Charge GYA Process Operation 2" .
+
+lca:AcetobacterPasteurianusFermentationCycleProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterFermentationCycleProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus Fermentation Cycle Process Operation 3" .
+
+lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterDischargeProductCollectionProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusChargeGYAProcessOperation3 ;
+	rdfs:label "Acetobacter pasteurianus Discharge Acetic Acid Collection Process Operation 3" .
+
+lca:AcetobacterPasteurianusEthanolAceticAcidConcentrationCheckProcessAction3 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:derivedFrom lca:AcetobacterSubstrateAlcoholProductConcentrationCheckProcessActionX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusCollectAceticAcidProcessAction3 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	rdfs:label "Acetobacter pasteurianus Ethanol/Acetic Acid Concentration Check Process Action 3" .
+
+lca:AcetobacterPasteurianusCollectAceticAcidProcessAction3 a recipe:ProcessActionRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusDischargeAceticAcidCollectionProcessOperation3 ;
+	lca:derivedFrom lca:AcetobacterCollectProductProcessActionX ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification2 ;
+	lca:hasPrescribedOutput lca:AceticAcidIntermediateMaterialRequirementSpecification1, lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3 ;
+	rdfs:label "Acetobacter pasteurianus Collect Acetic Acid Process Action 3" .
+
+lca:AcetobacterPasteurianusChargeGYAProcessOperation3 a recipe:ProcessOperationRecipeComponent ;
+	lca:isContinuantPartOf lca:AcetobacterPasteurianusSemiContinuousProcessStage1 ;
+	lca:derivedFrom lca:AcetobacterChargeSubstrateProcessOperationX ;
+	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusFermentationCycleProcessOperation4 ;
+	lca:hasPrescribedInput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification3, lca:GYABrothIntermediateMaterialRequirementSpecification3 ;
+	lca:hasPrescribedOutput lca:AcetobacterPasteurianusGYABrothEthanolIntermediateMaterialRequirementSpecification1 ;
+	rdfs:label "Acetobacter pasteurianus Charge GYA Process Operation 3" .
+
