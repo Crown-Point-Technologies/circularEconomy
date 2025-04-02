@@ -1,0 +1,31 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+PREFIX lca: <https://spec.industrialontologies.org/ontology/lca/core/> 
+PREFIX iof: <https://spec.industrialontologies.org/ontology/core/Core/> 
+PREFIX execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> 
+PREFIX material: <https://spec.industrialontologies.org/ontology/material/> 
+
+SELECT ?methodLabel ?flowLabel ?srcMaterialLabel ?matIntensityValue 
+WHERE {
+	?manufacturingExecution a execution:BatchRun;
+		lca:hasInput ?srcMaterial;
+	 	rdfs:label ?methodLabel.
+	?srcMaterial a iof:RawMaterial; rdfs:label ?srcMaterialLabel.
+	?flow a lca:FlowRole;
+		lca:hasSourceMaterial ?srcMaterial;
+		rdfs:label ?flowLabel.
+	?portionOfMaterial a material:PortionOfMaterial;
+		lca:hasFlowRole ?flow;
+	?pofQuality a bfo:Quality; iof:hasMeasuredExpressionValue ?meValue.
+	?meValue a iof:MeasuredExpressionValue; iof:hasTextValue ?textValue.
+	?lcia a lca:LifeCycleInventoryAnalysis ;
+		lca:hasInput ?portionOfMaterial; 	
+		lca:hasOutput ?lcir;
+		lca:precedes ?materialIntensityAssessment1 .
+	?lcir a lca:LifeCycleInventoryResults ; lca:isInputOf ?mia .
+	?mia a lca:MaterialIntensityAssessment ; lca:hasOutput ?netWasteCalculationFormula.
+	?netWasteCalculationFormula a iof:InformationContentEntity ;
+		lca:hasFormula "((lca:GlucoseAmount1 + lca:EthanolAmount1)/lca:AceticAcidAmount1)" .
+	?matIntensity a lca:MaterialIntensity;
+		lca:hasInput ?netWasteCalculationFormula;
+		iof:hasValue ?matIntensityValue. }

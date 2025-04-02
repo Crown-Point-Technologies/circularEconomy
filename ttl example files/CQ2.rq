@@ -1,0 +1,24 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+PREFIX lca: <https://spec.industrialontologies.org/ontology/lca/core/> 
+PREFIX iof: <https://spec.industrialontologies.org/ontology/core/Core/> 
+PREFIX execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> 
+PREFIX material: <https://spec.industrialontologies.org/ontology/material/> 
+
+SELECT ?species ?flowLabel ?meValue
+WHERE {
+	?manufacturingExecution a execution:BatchRun;
+		lca:hasParticipant ?species;
+		lca:hasInput ?srcMaterial.
+	?species a bfo:MaterialEntity;
+		rdfs:label ?speciesLabel.
+	?srcMaterial a iof:RawMaterial; 
+		rdfs:label ?srcMaterialLabel.
+	?flow a lca:FlowRole;
+		rdfs:label ?flowLabel.
+	?portionOfMaterial a material:PortionOfMaterial;
+		lca:hasFlowRole ?flow;
+	?pofQuality a bfo:Quality;
+		iof:hasMeasuredExpressionValue ?meValue.
+	?meValue a iof:MeasuredExpressionValue; 
+		iof:hasTextValue ?textValue.}

@@ -1,0 +1,25 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+PREFIX lca: <https://spec.industrialontologies.org/ontology/lca/core/> 
+PREFIX iof: <https://spec.industrialontologies.org/ontology/core/Core/> 
+PREFIX execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> 
+PREFIX material: <https://spec.industrialontologies.org/ontology/material/> 
+
+SELECT ?speciesLabel (COUNT(ChargeGYABrothProcessOperation) AS ?semiContinuousCycles)  (MIN(fCPOLength + ?dAAPOLength + ?cGYABPOLength)) AS minimumCycleLength) (MAX(fCPOLength + ?dAAPOLength + ?cGYABPOLength)) AS maximumCycleLength) (SUM(fCPOLength + ?dAAPOLength + ?cGYABPOLength) AS ?totalCycleProductionLength)
+WHERE {
+	?manufacturingExecution a execution:BatchRun;
+		lca:hasParticipant ?species;
+		lca:hasPart ?semiContUnitProc.
+	?species a bfo:MaterialEntity;
+		rdfs:label ?speciesLabel.
+	?semiContUnitProc a execution:ManufacturingProcess;
+		lca:hasPart ?fermentationCycleProcessOperation;
+		lca:hasPart ?DischargeAceticAcidProcessOperation;
+		lca:hasPart ?ChargeGYABrothProcessOperation.
+	?fermentationCycleProcessOperation a execution:ManufacturingProcess;
+		lca:hasLength ?fCPOLength.
+	?DischargeAceticAcidProcessOperation a execution:ManufacturingProcess;
+		lca:hasLength ?dAAPOLength.
+	?ChargeGYABrothProcessOperation a execution:ManufacturingProcess;
+		lca:hasLength ?cGYABPOLength.
+}  group by ?speciesLabel 
