@@ -1,7 +1,7 @@
 # circularEconomy
 This repository is intended to show the progress and examples of a Life Cycle Assessment (LCA) ontology
 
-The LCAOntology.ttl is the current version of the ontology.  It is in the LCA Ontology Folder  It imports the following ontologies:
+The LCAOntology.ttl is the current version of the ontology.  It is in the LCA Ontology Folder.  It imports the following ontologies:
 - the Basic Formal Ontology (BFO)
 - the Industrial Ontologies Foundry (IOF)
 - the IOF Biopharmaceutical Manufacturing Ontologies, namely Equipment, Manufacturing Execution, Material, Monitoring & Control, Parameter, Physical and Recipe modules.
