@@ -16,16 +16,16 @@ WHERE {
 		rdfs:label ?flowLabel.
 	?portionOfMaterial a material:PortionOfMaterial;
 		lca:hasFlowRole ?flow;
-	?pofQuality a bfo:Quality; iof:hasMeasuredExpressionValue ?meValue.
-	?meValue a iof:MeasuredExpressionValue; iof:hasTextValue ?textValue.
-	?lcia a lca:LifeCycleInventoryAnalysis ;
+	OPTIONAL { ?pomQuality a bfo:Quality; iof:hasMeasuredExpressionValue ?meValue. }
+	OPTIONAL { ?meValue a iof:MeasuredExpressionValue; iof:hasTextValue ?textValue. }
+	OPTIONAL { ?lcia a lca:LifeCycleInventoryAnalysis ;
 		lca:hasInput ?portionOfMaterial; 	
 		lca:hasOutput ?lcir;
-		lca:precedes ?materialIntensityAssessment1 .
-	?lcir a lca:LifeCycleInventoryResults ; lca:isInputOf ?mia .
-	?mia a lca:MaterialIntensityAssessment ; lca:hasOutput ?netWasteCalculationFormula.
-	?netWasteCalculationFormula a iof:InformationContentEntity ;
-		lca:hasFormula "((lca:GlucoseAmount1 + lca:EthanolAmount1)/lca:AceticAcidAmount1)" .
-	?matIntensity a lca:MaterialIntensity;
+		lca:precedes ?mia . }
+	OPTIONAL { ?lcir a lca:LifeCycleInventoryResults ; lca:isInputOf ?mia . }
+	OPTIONAL { ?mia a lca:MaterialIntensityAssessment ; lca:hasOutput ?netWasteCalculationFormula. }
+	OPTIONAL { ?netWasteCalculationFormula a iof:InformationContentEntity ;
+		lca:hasFormula "((lca:GlucoseAmount1 + lca:EthanolAmount1)/lca:AceticAcidAmount1)" . }
+	OPTIONAL {?matIntensity a lca:MaterialIntensity;
 		lca:hasInput ?netWasteCalculationFormula;
-		iof:hasValue ?matIntensityValue. }
+		iof:hasValue ?matIntensityValue.} }

@@ -5,7 +5,7 @@ PREFIX iof: <https://spec.industrialontologies.org/ontology/core/Core/>
 PREFIX execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> 
 PREFIX material: <https://spec.industrialontologies.org/ontology/material/> 
 
-SELECT ?species ?flowLabel ?meValue
+SELECT ?speciesLabel ?flowLabel ?textValue
 WHERE {
 	?manufacturingExecution a execution:BatchRun;
 		lca:hasParticipant ?species;
@@ -18,7 +18,7 @@ WHERE {
 		rdfs:label ?flowLabel.
 	?portionOfMaterial a material:PortionOfMaterial;
 		lca:hasFlowRole ?flow;
-	?pofQuality a bfo:Quality;
-		iof:hasMeasuredExpressionValue ?meValue.
-	?meValue a iof:MeasuredExpressionValue; 
-		iof:hasTextValue ?textValue.}
+	OPTIONAL { ?pomQuality a bfo:Quality;
+		iof:hasMeasuredExpressionValue ?meValue. }
+	OPTIONAL { ?meValue a iof:MeasuredExpressionValue; 
+		iof:hasTextValue ?textValue.}}
