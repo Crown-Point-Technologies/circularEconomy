@@ -75,7 +75,7 @@
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#hasPartLCAInventoryAnalysis">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
 	<title xmlns="http://purl.org/dc/terms/">has part LCA Inventory Analysis</title>
 	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis"/>
 	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess"/>
@@ -83,7 +83,7 @@
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#hasPartLCAImpactAssessment">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
 	<title xmlns="http://purl.org/dc/terms/">has part LCA Impact Assessment</title>
 	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleImpactAssessment"/>
 	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess"/>
@@ -95,26 +95,10 @@
 	<title xmlns="http://purl.org/dc/terms/">flow identification</title>
 </rdf:Description>
 
-<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#hasPartFlowIdentification">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-	<title xmlns="http://purl.org/dc/terms/">has part Flow Identification</title>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#FlowIdentification"/>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis"/>
-</rdf:Description>
-
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#FlowRole">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
 	<title xmlns="http://purl.org/dc/terms/">flow role</title>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#hasOutputFlowRole">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/hasOutput"/>
-	<title xmlns="http://purl.org/dc/terms/">has output Flow Role</title>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#FlowRole"/>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#FlowIdentification"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#hasOutputLCAInventoryResult">
@@ -183,13 +167,13 @@
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#CradletoGateSystemBoundary">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://gioUbbiali.github.io/sco/SCO_0000024"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://www.w3id.org/sco#SCO_0000024"/>
 	<title xmlns="http://purl.org/dc/terms/">cradle-to-gate system boundary</title>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#CradletograveSystemBoundary">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://gioUbbiali.github.io/sco/SCO_0000024"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://www.w3id.org/sco#SCO_0000024"/>
 	<title xmlns="http://purl.org/dc/terms/">cradle-to-grave system boundary</title>
 </rdf:Description>
 
@@ -278,7 +262,7 @@ Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H
 	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="https://spec.industrialontologies.org/ontology/manufacturingexecution/"/>
 	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="https://spec.industrialontologies.org/ontology/monitoringandcontrol/"/>
 	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="https://spec.industrialontologies.org/ontology/parameter/"/>
-	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="http://gioUbbiali.github.io/sco/sco.owl"/>
+	<imports xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="https://www.w3id.org/sco"/>
 	<title xmlns="http://purl.org/dc/terms/">Circular Economy Ontology</title>
 </rdf:Description>
 
@@ -298,7 +282,7 @@ Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#hasPartLCAMaterialIntensityAssessment">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000117"/>
 	<title xmlns="http://purl.org/dc/terms/">has part LCA Material Intensity Assessment</title>
 	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#LifeCycleMaterialIntensityAssessment"/>
 	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleAssessmentProcess"/>
@@ -310,22 +294,6 @@ Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H
 	<title xmlns="http://purl.org/dc/terms/">has output LCA Material Intensity</title>
 	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#MaterialIntensity"/>
 	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#LifeCycleMaterialIntensityAssessment"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#hasPartSourceMaterial">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000178"/>
-	<title xmlns="http://purl.org/dc/terms/">has part Source Material</title>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/RawMaterial"/>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#isInputOfFlowRole">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/isInputOf"/>
-	<title xmlns="http://purl.org/dc/terms/">is input of Flow Role</title>
-	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#FlowRole"/>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/RawMaterial"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#hasFlowRole">
@@ -341,13 +309,7 @@ Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H
 	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/qualityOf"/>
 	<title xmlns="http://purl.org/dc/terms/">quality of Portion of Material</title>
 	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/material/PortionOfMaterial"/>
-	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#PortionOfMaterialQualtity"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#PortionOfMaterialQualtity">
-	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-	<title xmlns="http://purl.org/dc/terms/">portion of material qualtity</title>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#PortionOfMaterialQuality"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#hasMeasuredValueExpression">
@@ -383,7 +345,7 @@ Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H
 
 <rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#CradletocradleSystemBoundary">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://gioUbbiali.github.io/sco/SCO_0000024"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://www.w3id.org/sco#SCO_0000024"/>
 	<disjointWith xmlns="http://www.w3.org/2002/07/owl#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#CradletograveSystemBoundary"/>
 	<title xmlns="http://purl.org/dc/terms/">cradle-to-cradle system boundary</title>
 </rdf:Description>
@@ -403,6 +365,43 @@ Ndoye, B., Shafiei, R., Sanaei, N. S., Cleenwerck, I., Somda, M. K., Dicko, M. H
 	<title xmlns="http://purl.org/dc/terms/">inheres in Material Intensity Quality</title>
 	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#MaterialIntensityQuality"/>
 	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#NetWasteCalculationFormula"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#occurrentPartOfManufacturingProcess">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000132"/>
+	<title xmlns="http://purl.org/dc/terms/">occurrent part of Manufacturing Process</title>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/GainOfRole"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#PortionOfMaterialQuality">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<subClassOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+	<title xmlns="http://purl.org/dc/terms/">portion of material quality</title>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#realizesFlowIdentification">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+	<title xmlns="http://purl.org/dc/terms/">realizes Flow Identification</title>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#FlowIdentification"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/lca/core#LifeCycleInventoryAnalysis"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/lca/core#concretizesNetWasteCalculationFormula">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<subPropertyOf xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://purl.obolibrary.org/obo/BFO_0000059"/>
+	<title xmlns="http://purl.org/dc/terms/">concretizes Net Waste Calculation Formula</title>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#NetWasteCalculationFormula"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/ce/core#LifeCycleMaterialIntensityAssessment"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://spec.industrialontologies.org/ontology/ce/core#hasPartGlucose">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<title xmlns="http://purl.org/dc/terms/">has part Glucose</title>
+	<range xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/material/PortionOfMaterial"/>
+	<domain xmlns="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/RawMaterial"/>
 </rdf:Description>
 
 </rdf:RDF>
