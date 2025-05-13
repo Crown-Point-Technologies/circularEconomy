@@ -2,447 +2,447 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix recipe: <https://spec.industrialontologies.org/ontology/recipe/> .
-@prefix lca: <https://spec.industrialontologies.org/ontology/lca/core/> .
+@prefix mpdo: <https://spec.industrialontologies.org/ontology/mdpo/core/> .
 @prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
 @prefix execution: <https://spec.industrialontologies.org/ontology/manufacturingexecution/> .
 @prefix material: <https://spec.industrialontologies.org/ontology/material/> .
 
-lca:AcetobacterPasteurianusControlAceticAcidRecipe1 a recipe:ControlRecipe ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterAceticAcidRecipe1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlAceticAcidBatchRun1;
+mpdo:AcetobacterPasteurianusControlAceticAcidRecipe1 a recipe:ControlRecipe ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterAceticAcidRecipe1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlAceticAcidBatchRun1;
 	rdfs:label "Acetobacter pasteurianus Control Acetic Acid Recipe 1" .
 
-lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 a recipe:ProcedureRecipeComponent ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterAceticAcidFermentationProcedure1 ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1;
+mpdo:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 a recipe:ProcedureRecipeComponent ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterAceticAcidFermentationProcedure1 ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1;
 	rdfs:label "Acetobacter pasteurianus Control Acetic Acid Fermentation Procedure 1" .
 
-lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterStartUpUnitProcedure1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
 	rdfs:label "Acetobacter pasteurianus Control Start Up Unit Procedure 1" .
 
-lca:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterGlucoseYeastAceticAcidBrothPreparationUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlRevitalizationUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterGlucoseYeastAceticAcidBrothPreparationUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlRevitalizationUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlRevitalizationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterRevitalizationUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlIncubationUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlRevitalizationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterRevitalizationUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlIncubationUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Revitalization Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlIncubationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterIncubationUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlIncubationManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlIncubationUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterIncubationUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlIncubationManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Incubation Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
+mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol Check/Final Volume Addition Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlEthanolConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolConcentrationCheckPhase1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlEthanolConcentrationCheckManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
+mpdo:AcetobacterPasteurianusControlEthanolConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterEthanolConcentrationCheckPhase1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlEthanolConcentrationCheckManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol Concentration Check Phase 1" .
 
-lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterGYABrothAdditionPhase1 ;
+mpdo:AcetobacterPasteurianusControlGYABrothAdditionPhase1 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterGYABrothAdditionPhase1 ;
 	rdfs:label "Acetobacter pasteurianus Control GYA Broth Addition Phase 1" .
 
-lca:AcetobacterPasteurianusControlEthanolAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAdditionUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlEthanolAdditionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterEthanolAdditionUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol Addition Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
+mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 a recipe:UnitProcedureRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterSemiContinuousUnitProcedure1 ;
 	rdfs:label "Acetobacter pasteurianus Control Semi-Continuous Unit Procedure 1" .
 
-lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterFermentationCycleUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlChargeGYAUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlCollectAceticAcidPhase1 ;
+mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase1 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Phase 1" .
 
-lca:AcetobacterPasteurianusControlCollectAceticAcidPhase1 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1;
+mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase1 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterCollectAceticAcidPhase1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1;
 	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Phase 1" .
 
-lca:AcetobacterPasteurianusControlChargeGYAUnitOperation1 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 ;
+mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation1 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterChargeGYAUnitOperation1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 ;
 	rdfs:label "Acetobacter pasteurianus Control Charge GYA Unit Operation 1" .
 
-lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation2 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterFermentationCycleUnitOperation2 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
 	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Unit Operation 2" .
 
-lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlChargeGYAUnitOperation2 ;
+mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation2 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation2 ;
 	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Unit Operation 2" .
 
-lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase2 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase2 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess2;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlCollectAceticAcidPhase2 ;
+mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase2 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase2 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess2;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase2 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Phase 2" .
 
-lca:AcetobacterPasteurianusControlCollectAceticAcidPhase2 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase2 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2;
+mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase2 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterCollectAceticAcidPhase2 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2;
 	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Phase 2" .
 
-lca:AcetobacterPasteurianusControlChargeGYAUnitOperation2 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation2 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 ;
+mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation2 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterChargeGYAUnitOperation2 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 ;
 	rdfs:label "Acetobacter pasteurianus Control Charge GYA Unit Operation 2" .
 
-lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterFermentationCycleUnitOperation3 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterFermentationCycleUnitOperation3 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
 	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Unit Operation 3" .
 
-lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlChargeGYAUnitOperation3 ;
+mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterDischargeAceticAcidCollectionUnitOperation3 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation3 ;
 	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Unit Operation 3" .
 
-lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase3 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase3 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3;
-	lca:hasPrescribedToPrecede lca:AcetobacterPasteurianusControlCollectAceticAcidPhase3 ;
+mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase3 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterEthanolAceticAcidConcentrationCheckPhase3 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3;
+	mpdo:hasPrescribedToPrecede mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase3 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Phase 3" .
 
-lca:AcetobacterPasteurianusControlCollectAceticAcidPhase3 a recipe:PhaseRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterCollectAceticAcidPhase3 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3;
+mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase3 a recipe:PhaseRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterCollectAceticAcidPhase3 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3;
 	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Phase 3" .
 
-lca:AcetobacterPasteurianusControlChargeGYAUnitOperation3 a recipe:UnitOperationRecipeComponent ;
-	lca:isContinuantPartOf lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
-	lca:prescribes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3;
-	lca:derivedFrom lca:AcetobacterPasteurianusMasterChargeGYAUnitOperation3 ;
+mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation3 a recipe:UnitOperationRecipeComponent ;
+	mpdo:isContinuantPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+	mpdo:prescribes mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3;
+	mpdo:derivedFrom mpdo:AcetobacterPasteurianusMasterChargeGYAUnitOperation3 ;
 	rdfs:label "Acetobacter pasteurianus Control Charge GYA Unit Operation 3" .
 
-lca:ControlAceticAcidBioreactorEngineeredSystemRequirementSpecification1 a lca:EngineeredSystemRequirementSpecification ;
-	lca:hasPrescribedToParticipateIn lca:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
-	lca:derivedFrom lca:MasterAceticAcidBioreactorEngineeredSystemRequirementSpecification1 ;
-	iof:prescribes lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidBioreactorEngineeredSystemRequirementSpecification1 a mpdo:EngineeredSystemRequirementSpecification ;
+	mpdo:hasPrescribedToParticipateIn mpdo:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
+	mpdo:derivedFrom mpdo:MasterAceticAcidBioreactorEngineeredSystemRequirementSpecification1 ;
+	iof:prescribes mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Bioreactor Engineered System Requirement Specification 1" .
 
-lca:ControlAceticAcidBioreactorEngineeredSystem1 a iof:EngineeredSystem ;
-	lca:participatesIn lca:AcetobacterPasteurianusControlAceticAcidBatchRun1;
+mpdo:ControlAceticAcidBioreactorEngineeredSystem1 a iof:EngineeredSystem ;
+	mpdo:participatesIn mpdo:AcetobacterPasteurianusControlAceticAcidBatchRun1;
 	rdfs:label "Control Acetic Acid Bioreactor Engineered System 1" .
 
-lca:ControlAceticAcidBioreactorVessel1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidBioreactorVessel1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Bioreactor Vessel 1" .
 
-lca:ControlAceticAcidBioreactorElectricalEquipmentBox1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidBioreactorElectricalEquipmentBox1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Bioreactor Electrical Equipment Box 1" .
 
-lca:ControlAceticAcidOxygenSensor1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidOxygenSensor1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Oxygen Sensor 1" .
 
-lca:ControlAceticAcidTemperatureSensor1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidTemperatureSensor1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Temperature Sensor 1" .
 
-lca:ControlAceticAcidVentilationTube1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidVentilationTube1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Ventilation Tube 1" .
 
-lca:ControlAceticAcidEthanolSupplyingTube1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidEthanolSupplyingTube1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Ethanol Supplying Tube 1" .
 
-lca:ControlAceticAcidRecyclingPump1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidRecyclingPump1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Recycling Pump 1" .
 
-lca:ControlAceticAcidHeatExchanger1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidHeatExchanger1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Heat Exchanger 1" .
 
-lca:ControlAceticAcidVenturiAirValve1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidVenturiAirValve1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Venturi Air Valve 1" .
 
-lca:ControlAceticAcidVenturiEthanolValve1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidVenturiEthanolValve1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Venturi Ethanol Valve 1" .
 
-lca:ControlAceticAcidVinegarOutputValve1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidVinegarOutputValve1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Vinegar Output Valve 1" .
 
-lca:ControlAceticAcidEthanolInputValve1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidEthanolInputValve1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Ethanol Input Valve 1" .
 
-lca:ControlAceticAcidEthanolInputCanister1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidEthanolInputCanister1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Ethanol Input Canister 1" .
 
-lca:ControlAceticAcidVinegarOutputCanister1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidVinegarOutputCanister1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Vinegar Output Canister 1" .
 
-lca:ControlAceticAcidDrainingAndCleaningValve1 a iof:Assembly ;
-	lca:isContinuantPartOf lca:ControlAceticAcidBioreactorEngineeredSystem1 ;
+mpdo:ControlAceticAcidDrainingAndCleaningValve1 a iof:Assembly ;
+	mpdo:isContinuantPartOf mpdo:ControlAceticAcidBioreactorEngineeredSystem1 ;
 	rdfs:label "Control Acetic Acid Draining & Cleaning Valve 1" .
 
-lca:AcetobacterPasteurianusControlAceticAcidBatchRun1 a execution:BatchRun ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
-	lca:boundedBy lca:AcetobacterPasteurianusCradletoGateSystemBoundary1 ;
-	iof:hasInput lca:GlucosePortionOfMaterial1 ;
+mpdo:AcetobacterPasteurianusControlAceticAcidBatchRun1 a execution:BatchRun ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlAceticAcidRecipe1 ;
+	mpdo:boundedBy mpdo:AcetobacterPasteurianusCradletoGateSystemBoundary1 ;
+	iof:hasInput mpdo:GlucosePortionOfMaterial1 ;
 	rdfs:label "Acetobacter pasteurianus Control Acetic Acid Batch Run 1" .
 
-lca:AcetobacterPasteurianusCradletoGateSystemBoundary1 a lca:CradletoGateSystemBoundary ;
+mpdo:AcetobacterPasteurianusCradletoGateSystemBoundary1 a mpdo:CradletoGateSystemBoundary ;
 	rdfs:label "Acetobacter pasteurianus Cradle to Gate System Boundary 1" .
 
-lca:AcetobacterPasteurianusGlucosePortionOfMaterial1 a material:PortionOfMaterial;
-	iof:hasQuality lca:AcetobacterPasteurianusGlucoseAmount1;
+mpdo:AcetobacterPasteurianusGlucosePortionOfMaterial1 a material:PortionOfMaterial;
+	iof:hasQuality mpdo:AcetobacterPasteurianusGlucoseAmount1;
 	rdfs:label "Acetobacter pasteurianus Glucose Portion of Material 1" .
 
-lca:AcetobacterPasteurianusGlucoseAmount1 a iof:Quality;
+mpdo:AcetobacterPasteurianusGlucoseAmount1 a iof:Quality;
 	iof:hasMeasuredValueExpression "54.6kg".
 
-lca:AcetobacterPasteurianusEthanolPortionOfMaterial1 a material:PortionOfMaterial;
-	iof:hasQuality lca:AcetobacterPasteurianusEthanolAmount1;
+mpdo:AcetobacterPasteurianusEthanolPortionOfMaterial1 a material:PortionOfMaterial;
+	iof:hasQuality mpdo:AcetobacterPasteurianusEthanolAmount1;
 	rdfs:label "Acetobacter pasteurianus Ethanol Portion of Material 1" .
 
-lca:AcetobacterPasteurianusEthanolAmount1 a iof:Quality;
+mpdo:AcetobacterPasteurianusEthanolAmount1 a iof:Quality;
 	iof:hasMeasuredValueExpression "4.5kg".
 	
-lca:AcetobacterPasteurianusAceticAcidPortionOfMaterial1 a material:PortionOfMaterial;
-	iof:hasQuality lca:AcetobacterPasteurianusAceticAcidAmount1;
+mpdo:AcetobacterPasteurianusAceticAcidPortionOfMaterial1 a material:PortionOfMaterial;
+	iof:hasQuality mpdo:AcetobacterPasteurianusAceticAcidAmount1;
 	rdfs:label "Acetobacter pasteurianus Acetic Acid Portion of Material 1" .
 
-lca:AcetobacterPasteurianusAceticAcidAmount1 a iof:Quality;
+mpdo:AcetobacterPasteurianusAceticAcidAmount1 a iof:Quality;
 	iof:hasMeasuredValueExpression "12.3kg".
 	
-lca:AcetobacterPasteurianusLifeCycleInventoryAnalysis1 a lca:LifeCycleInventoryAnalysis;
-    lca:hasInput lca:GlucoseAmount1;
-    lca:hasInput lca:EthanolAmount1;
-    lca:hasInput lca:AceticAcidAmount1;
-    lca:hasOutput lca:LifeCycleInvetoryResults1;
-    lca:precedes lca:MaterialIntensityAssessment1;
+mpdo:AcetobacterPasteurianusLifeCycleInventoryAnalysis1 a mpdo:LifeCycleInventoryAnalysis;
+    mpdo:hasInput mpdo:GlucoseAmount1;
+    mpdo:hasInput mpdo:EthanolAmount1;
+    mpdo:hasInput mpdo:AceticAcidAmount1;
+    mpdo:hasOutput mpdo:LifeCycleInvetoryResults1;
+    mpdo:precedes mpdo:MaterialIntensityAssessment1;
     rdfs:label "Acetobacter pasteurianus Life Cycle Inventory Analysis 1" .
     
-lca:AcetobacterPasteurianusLifeCycleInventoryResults1 a lca:LifeCycleInventoryResults;
-    lca:isInputOf lca:MaterialIntensityAssessment1;
+mpdo:AcetobacterPasteurianusLifeCycleInventoryResults1 a mpdo:LifeCycleInventoryResults;
+    mpdo:isInputOf mpdo:MaterialIntensityAssessment1;
 	rdfs:label "Acetobacter pasteurianus Life Cycle Inventory Results 1" .
 
-lca:MaterialIntensityAssessment1 a lca:MaterialIntensityAssessment;
-	lca:hasOutput lca:NetWasteCalculationFormula1;
-	lca:concretizes lca:NetWasteCalculationFormula1;
+mpdo:MaterialIntensityAssessment1 a mpdo:MaterialIntensityAssessment;
+	mpdo:hasOutput mpdo:NetWasteCalculationFormula1;
+	mpdo:concretizes mpdo:NetWasteCalculationFormula1;
 	rdfs:label "Acetobacter pasteurianus Material Intensity Assessment 1" .
 
-lca:NetWasteCalculationFormula1 a iof:InformationContentEntity;
-	lca:hasInput lca:AcetobacterPasteurianusLifeCycleInventoryAnalysis1;
-	lca:hasFormula "((lca:GlucoseAmount1 + lca:EthanolAmount1)/lca:AceticAcidAmount1)" ;
+mpdo:NetWasteCalculationFormula1 a iof:InformationContentEntity;
+	mpdo:hasInput mpdo:AcetobacterPasteurianusLifeCycleInventoryAnalysis1;
+	mpdo:hasFormula "((mpdo:GlucoseAmount1 + mpdo:EthanolAmount1)/mpdo:AceticAcidAmount1)" ;
 	rdfs:label "Acetobacter pasteurianus Net Waste Calculation Formula 1" .
 	
-lca:MaterialIntensity1 a iof:InformationContentEntity;
-	lca:hasInput lca:NetWasteCalculationFormula1;
+mpdo:MaterialIntensity1 a iof:InformationContentEntity;
+	mpdo:hasInput mpdo:NetWasteCalculationFormula1;
 	rdfs:label "Acetobacter pasteurianus Material Intensity 1" .
 
-lca:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlAceticAcidBatchRun1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
+mpdo:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlAceticAcidBatchRun1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
 	rdfs:label "Acetobacter pasteurianus Control Acetic Acid Fermentation Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlAceticAcidFermentationManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlStartUpUnitProcedure1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Start Up Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlGlucoseYeastAceticAcidBrothPreparationUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Glucose-Yeast-Acetic Acid (GYA) Broth Preparation Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlRevitalizationUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlIncubationManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlRevitalizationManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlRevitalizationUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlIncubationManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Revitalization Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlIncubationUnitOperation1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlIncubationUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlIncubationUnitOperation1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlIncubationUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Incubation Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol Check/Final Volume Addition Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlEthanolConcentrationCheckManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlEthanolConcentrationCheckPhase1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlEthanolConcentrationCheckManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlEthanolConcentrationCheckPhase1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol Concentration Check Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
+mpdo:AcetobacterPasteurianusControlGYABrothAdditionManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlEthanolCheckFinalVolumeAdditionManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlGYABrothAdditionPhase1 ;
 	rdfs:label "Acetobacter pasteurianus Control GYA Broth Addition Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlEthanolAdditionUnitOperation1 ;
+mpdo:AcetobacterPasteurianusControlEthanolAdditionManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlStartUpManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlEthanolAdditionUnitOperation1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol Addition Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
+mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlAceticAcidFermentationProcedure1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlSemiContinuousUnitProcedure1 ;
 	rdfs:label "Acetobacter pasteurianus Control Semi-Continuous Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1 ;
+mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlCollectAceticAcidPhase1 ;
+mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase1 ;
 	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlChargeGYAUnitOperation1 ;
-	lca:precedes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2 ;
+mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess1 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation1 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2 ;
 	rdfs:label "Acetobacter pasteurianus Control Charge GYA Manufacturing Process 1" .
 
-lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 ;
-	lca:precedes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 ;
+mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess2 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation2 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 ;
 	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Manufacturing Process 2" .
 
-lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
-	lca:precedes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2 ;
+mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2 ;
 	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Manufacturing Process 2" .
 
-lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess2 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase2 ;
-	lca:precedes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2 ;
+mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess2 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckPhase2 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Manufacturing Process 2" .
 
-lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlCollectAceticAcidPhase2 ;
+mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess2 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess2 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase2 ;
 	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Manufacturing Process 2" .
 
-lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlChargeGYAUnitOperation2 ;
-	lca:precedes lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3 ;
+mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess2 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation2 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation2 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3 ;
 	rdfs:label "Acetobacter pasteurianus Control Charge GYA Manufacturing Process 2" .
 
-lca:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 ;
-	lca:precedes lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 ;
+mpdo:AcetobacterPasteurianusControlFermentationCycleManufacturingProcess3 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlFermentationCycleUnitOperation3 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 ;
 	rdfs:label "Acetobacter pasteurianus Control Fermentation Cycle Manufacturing Process 3" .
 
-lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
-	lca:precedes lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3 ;
+mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlSemiContinuousManufacturingProcess1 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3 ;
 	rdfs:label "Acetobacter pasteurianus Control Discharge Acetic Acid Collection Manufacturing Process 3" .
 
-lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3 ;
-	lca:precedes lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3 ;
+mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlEthanolAceticAcidConcentrationCheckManufacturingProcess3 ;
+	mpdo:precedes mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3 ;
 	rdfs:label "Acetobacter pasteurianus Control Ethanol/Acetic Acid Concentration Check Manufacturing Process 3" .
 
-lca:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlCollectAceticAcidPhase3 ;
+mpdo:AcetobacterPasteurianusControlCollectAceticAcidManufacturingProcess3 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionManufacturingProcess3 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlCollectAceticAcidPhase3 ;
 	rdfs:label "Acetobacter pasteurianus Control Collect Acetic Acid Manufacturing Process 3" .
 
-lca:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3 a execution:ManufacturingProcess ;
-	lca:isOccurrentPartOf lca:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
-	lca:prescribedBy lca:AcetobacterPasteurianusControlChargeGYAUnitOperation3 ;
+mpdo:AcetobacterPasteurianusControlChargeGYAManufacturingProcess3 a execution:ManufacturingProcess ;
+	mpdo:isOccurrentPartOf mpdo:AcetobacterPasteurianusControlDischargeAceticAcidCollectionUnitOperation3 ;
+	mpdo:prescribedBy mpdo:AcetobacterPasteurianusControlChargeGYAUnitOperation3 ;
 	rdfs:label "Acetobacter pasteurianus Control Charge GYA Manufacturing Process 3" .
