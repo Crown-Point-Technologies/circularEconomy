@@ -1,4 +1,4 @@
-# circularEconomy
+# manufacturingProcessDesignOptimization
 This repository is intended to show the progress and examples of a Manufacturing Process Design Optimization ontology
 
 The MPDOOntology.ttl is the current version of the ontology.  It is in the MPDO Ontology Folder.  It imports the following ontologies:
